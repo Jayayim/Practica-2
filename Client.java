@@ -13,19 +13,7 @@ public class Client {
              Scanner scanner = new Scanner(System.in)) {
 
             // Mostrar mensaje de bienvenida del servidor
-            System.out.println("Servidor: " + in.readLine());
-
-            String userInput;
-            do {
-                System.out.print("Tu mensaje: ");
-                userInput = scanner.nextLine();
-                out.println(userInput); // Enviar mensaje al servidor
-
-                // Leer respuesta del servidor
-                String response = in.readLine();
-                System.out.println(response);
-
-            } while (!userInput.equalsIgnoreCase("salir"));
+            System.out.println("Soy cliente: " + serverAddress);
 
         } catch (IOException e) {
             e.printStackTrace();
